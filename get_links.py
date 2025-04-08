@@ -19,6 +19,13 @@ def crawl(url, depth=2):
     except:
         pass
 
-start_url = "https://virginia.edu"
-crawl(start_url)
+urls = [
+    "https://virginia.edu/apply",
+    "https://virginia.edu/alumni",
+    "https://virginia.edu/facts",
+    "https://virginia.edu/academics",
+    "https://virginia.edu/life",
+]
+for url in urls:
+    crawl(url)
 print("\n".join(visited))
