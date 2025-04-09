@@ -18,7 +18,7 @@ def extract_text_from_url(url):
         print(f"Failed to extract from {url}: {e}")
         return ""
 
-def extract_from_multiple_urls(urls, output_csv='output.csv'):
+def extract_from_multiple_urls(urls, output_csv='2deep_output.csv'):
     with open(output_csv, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         writer.writerow(['URL', 'ExtractedText'])
@@ -31,12 +31,7 @@ def extract_from_multiple_urls(urls, output_csv='output.csv'):
     print(f"All data saved to {output_csv}")
 
 # Example usage
-url_list = [
-    "https://virginia.edu/apply",
-    "https://virginia.edu/alumni",
-    "https://virginia.edu/facts",
-    "https://virginia.edu/academics",
-    "https://virginia.edu/life",
-]
+with open("links_2deep.txt", "r") as f:
+    url_list = [line.strip() for line in f if line.strip()]
 
 extract_from_multiple_urls(url_list)
