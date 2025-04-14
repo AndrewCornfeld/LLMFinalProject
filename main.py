@@ -25,4 +25,4 @@ while True:
     
     websites = retriever.invoke(question)
     result = chain.invoke({"websites": websites, "question": question})
-    print(result)
+    print(result, websites)
