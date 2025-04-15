@@ -8,8 +8,9 @@ df = pd.read_csv("2deep_output.csv")
 embeddings = OllamaEmbeddings(model="mxbai-embed-large")
 
 db_location = "./chrome_langchain_db"
+#db_location = "./fake_data_db"
 add_documents = not os.path.exists(db_location)
-
+#add_documents = True
 if add_documents:
     documents = []
     ids = []
