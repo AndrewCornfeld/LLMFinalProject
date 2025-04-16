@@ -1,4 +1,4 @@
-This is a UVA chatbot which can answer questions about UVA. Created by Andrew Cornfeld, Bereket Tafesse, and Jonathan Swap.
+This is a UVA chatbot which can answer questions about UVA. It pulls from existing UVA websites to source important information faster than manually searching for it. Created by Andrew Cornfeld, Bereket Tafesse, and Jonathan Swap.
 
 This LLM runs completely locally, there is no internet required once it is installed.
 
